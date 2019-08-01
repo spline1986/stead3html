@@ -20,5 +20,5 @@ metaparser:
 	rm metaparser.md
 
 clean:
-	rm stead3.html
-	rm metaparser.html
+	rm -f stead3.html
+	rm -f metaparser.html
