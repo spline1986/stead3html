@@ -1,7 +1,19 @@
 all:
+	${MAKE} stead3
+	${MAKE} metaparser
+
+stead3:
 	wget https://raw.githubusercontent.com/instead-hub/instead/master/doc/stead3-ru.md
-	cat metadata.md > stead3.md
+	cat stead3-metadata.md > stead3.md
 	cat stead3-ru.md >> stead3.md
 	rm stead3-ru.md
 	pandoc -s --toc ./stead3.md -H style.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
+
+metaparser:
+	wget https://raw.githubusercontent.com/instead-hub/metaparser/master/doc/manual-ru.md
+	cat metaparser-metadata.md > metaparser.md
+	cat manual-ru.md >> metaparser.md
+	rm manual-ru.md
+	pandoc -s --toc ./metaparser.md -H style.html -B header.html -A footer.html -o ./metaparser.html
+	rm metaparser.md
