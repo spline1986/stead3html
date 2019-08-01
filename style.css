@@ -1,0 +1,15 @@
+body {
+	background: #cccccc;
+	color: #000000;
+	font-size: 14pt;
+	font-family: sans-serif;
+}
+
+#content {
+	background: #ffffff;
+	border: 1px solid #444444;
+	padding: 15pt;
+	width: 75%;
+	min-width: 800px;
+	text-align: left;
+}
