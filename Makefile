@@ -1,4 +1,5 @@
 all:
+	${MAKE} clean
 	${MAKE} stead3
 	${MAKE} metaparser
 
@@ -17,3 +18,7 @@ metaparser:
 	rm manual-ru.md
 	pandoc -s --toc ./metaparser.md -H style.html -B header.html -A footer.html -o ./metaparser.html
 	rm metaparser.md
+
+clean:
+	rm stead3.html
+	rm metaparser.html
