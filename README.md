@@ -12,16 +12,34 @@
 $ make
 ```
 
+или в тёмной теме:
+
+```bash
+$ make dark
+```
+
 Только для stead3:
 
 ```bash
 $ make stead3
 ```
 
+В тёмной теме:
+
+```bash
+$ make stead3-dark
+```
+
 Или только для метапарсера:
 
 ```bash
 $ make metaparser
+```
+
+В тёмной теме:
+
+```bash
+$ make metaparser-dark
 ```
 
 Удалить сконвертированные файлы можно командой
