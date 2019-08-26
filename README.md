@@ -30,6 +30,18 @@ $ make stead3
 $ make stead3-dark
 ```
 
+Только для модулей:
+
+```bash
+$ make modules
+```
+
+В тёмной теме:
+
+```bash
+$ make modules-dark
+```
+
 Или только для метапарсера:
 
 ```bash
