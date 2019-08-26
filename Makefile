@@ -1,11 +1,13 @@
 all:
 	${MAKE} clean
 	${MAKE} stead3
+	${MAKE} modules
 	${MAKE} metaparser
 
 dark:
 	${MAKE} clean
 	${MAKE} stead3-dark
+	${MAKE} modules-dark
 	${MAKE} metaparser-dark
 
 stead3:
@@ -15,6 +17,14 @@ stead3:
 	rm stead3-ru.md
 	pandoc -s --toc ./stead3.md -H style.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
+
+modules:
+	wget https://raw.githubusercontent.com/instead-hub/instead/master/doc/modules3-ru.md
+	cat modules-metadata.md > modules.md
+	cat modules3-ru.md >> modules.md
+	rm modules3-ru.md
+	pandoc -s --toc ./modules.md -H style.html -B header.html -A footer.html -o ./modules.html
+	rm modules.md
 
 metaparser:
 	wget https://raw.githubusercontent.com/instead-hub/metaparser/master/doc/manual-ru.md
@@ -32,6 +42,14 @@ stead3-dark:
 	pandoc -s --toc ./stead3.md -H style_dark.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
 
+modules-dark:
+	wget https://raw.githubusercontent.com/instead-hub/instead/master/doc/modules3-ru.md
+	cat modules-metadata.md > modules.md
+	cat modules3-ru.md >> modules.md
+	rm modules3-ru.md
+	pandoc -s --toc ./modules.md -H style_dark.html -B header.html -A footer.html -o ./modules.html
+	rm modules.md
+
 metaparser-dark:
 	wget https://raw.githubusercontent.com/instead-hub/metaparser/master/doc/manual-ru.md
 	cat metaparser-metadata.md > metaparser.md
@@ -42,4 +60,5 @@ metaparser-dark:
 
 clean:
 	rm -f stead3.html
+	rm -f modules.html
 	rm -f metaparser.html
