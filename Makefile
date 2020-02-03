@@ -21,7 +21,7 @@ stead3:
 	cat stead3-metadata.md > stead3.md
 	cat stead3-ru.md >> stead3.md
 	rm stead3-ru.md
-	pandoc -s --toc ./stead3.md -H style.html -B header.html -A footer.html -o ./stead3.html
+	pandoc -f markdown-raw_tex -s --toc ./stead3.md -H style.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
 
 modules:
@@ -29,7 +29,7 @@ modules:
 	cat modules-metadata.md > modules.md
 	cat modules3-ru.md >> modules.md
 	rm modules3-ru.md
-	pandoc -s --toc ./modules.md -H style.html -B header.html -A footer.html -o ./modules.html
+	pandoc -f markdown-raw_tex -s --toc ./modules.md -H style.html -B header.html -A footer.html -o ./modules.html
 	rm modules.md
 
 metaparser:
@@ -37,7 +37,7 @@ metaparser:
 	cat metaparser-metadata.md > metaparser.md
 	cat manual-ru.md >> metaparser.md
 	rm manual-ru.md
-	pandoc -s --toc ./metaparser.md --highlight-style pygments -H style.html -B header.html -A footer.html -o ./metaparser.html
+	pandoc -f markdown-raw_tex -s --toc ./metaparser.md --highlight-style pygments -H style.html -B header.html -A footer.html -o ./metaparser.html
 	rm metaparser.md
 
 stead3-dark:
@@ -45,7 +45,7 @@ stead3-dark:
 	cat stead3-metadata.md > stead3.md
 	cat stead3-ru.md >> stead3.md
 	rm stead3-ru.md
-	pandoc -s --toc ./stead3.md -H style_dark.html -B header.html -A footer.html -o ./stead3.html
+	pandoc -f markdown-raw_tex -s --toc ./stead3.md -H style_dark.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
 
 modules-dark:
@@ -53,7 +53,7 @@ modules-dark:
 	cat modules-metadata.md > modules.md
 	cat modules3-ru.md >> modules.md
 	rm modules3-ru.md
-	pandoc -s --toc ./modules.md -H style_dark.html -B header.html -A footer.html -o ./modules.html
+	pandoc -f markdown-raw_tex -s --toc ./modules.md -H style_dark.html -B header.html -A footer.html -o ./modules.html
 	rm modules.md
 
 metaparser-dark:
@@ -61,7 +61,7 @@ metaparser-dark:
 	cat metaparser-metadata.md > metaparser.md
 	cat manual-ru.md >> metaparser.md
 	rm manual-ru.md
-	pandoc -s --toc ./metaparser.md --highlight-style pygments -H style_dark.html -B header.html -A footer.html -o ./metaparser.html
+	pandoc -f markdown-raw_tex -s --toc ./metaparser.md --highlight-style pygments -H style_dark.html -B header.html -A footer.html -o ./metaparser.html
 	rm metaparser.md
 
 stead3-gurochan:
@@ -69,7 +69,7 @@ stead3-gurochan:
 	cat stead3-metadata.md > stead3.md
 	cat stead3-ru.md >> stead3.md
 	rm stead3-ru.md
-	pandoc -s --toc ./stead3.md -H style_gurochan.html -B header.html -A footer.html -o ./stead3.html
+	pandoc -f markdown-raw_tex -s --toc ./stead3.md -H style_gurochan.html -B header.html -A footer.html -o ./stead3.html
 	rm stead3.md
 
 modules-gurochan:
@@ -77,7 +77,7 @@ modules-gurochan:
 	cat modules-metadata.md > modules.md
 	cat modules3-ru.md >> modules.md
 	rm modules3-ru.md
-	pandoc -s --toc ./modules.md -H style_gurochan.html -B header.html -A footer.html -o ./modules.html
+	pandoc -f markdown-raw_tex -s --toc ./modules.md -H style_gurochan.html -B header.html -A footer.html -o ./modules.html
 	rm modules.md
 
 metaparser-gurochan:
@@ -85,7 +85,7 @@ metaparser-gurochan:
 	cat metaparser-metadata.md > metaparser.md
 	cat manual-ru.md >> metaparser.md
 	rm manual-ru.md
-	pandoc -s --toc ./metaparser.md --highlight-style pygments -H style_gurochan.html -B header.html -A footer.html -o ./metaparser.html
+	pandoc -f markdown-raw_tex -s --toc ./metaparser.md --highlight-style pygments -H style_gurochan.html -B header.html -A footer.html -o ./metaparser.html
 	rm metaparser.md
 
 clean:
